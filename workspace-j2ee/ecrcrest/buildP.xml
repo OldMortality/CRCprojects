@@ -1,0 +1,40 @@
+<project default="deploywar">
+
+
+	<property name="deploydir" value="C:\apache-tomcat-6.0.37\webapps" />
+	<property name="targetdir" value="C:\Users\michel\workspace-j2ee\ecrcrest\WebContent" />
+
+	<!-- DB settings for test environment -->
+	<target name="dbreplace">
+		<replace file="${targetdir}/WEB-INF/classes/hibernate.cfg.xml">
+			<replacefilter token="@DB_NAME@" value="ECRCDBP" />
+			<replacefilter token="@DB_USER@" value="FRED9451" />
+			<replacefilter token="@DB_PW@" value="IUY6754fNMU890" />
+
+		</replace>
+	</target>
+
+
+	<target name="log4jreplace" depends="dbreplace">
+		<replace file="${targetdir}/WEB-INF/classes/log4j.properties">
+
+			<replacefilter token="@LOGFILE@" value="ecrcrestp.log" />
+
+			<!-- replacefilter token="@MAIL_FROM@" value="eCRCsystem" /  -->
+			<replacefilter token="@MAIL_TO@" value="michel_de_lange@yahoo.co.uk" />
+			<replacefilter token="@MAIL_HOST@" value="mailrelay.staff.otago.ac.nz" />
+			<replacefilter token="@APPENDER@" value="org.apache.log4j.net.SMTPAppender" />
+			<!-- replacefilter token="log4j.rootLogger=info, stdout, file" value="log4j.rootLogger=info, stdout, file, email" /-->
+
+		</replace>
+	</target>
+
+	<!--   create the production war file -->
+	<target name="deploywar" depends="log4jreplace">
+		<zip destfile="${deploydir}/ecrcrestp.war" basedir="${targetdir}">
+		</zip>
+	</target>
+
+
+
+</project>

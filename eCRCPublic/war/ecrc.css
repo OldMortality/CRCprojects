@@ -1,0 +1,193 @@
+/** Add css rules here for your application. */
+
+body {
+	font: 15px arial,sans-serif;
+	margin: 0px;
+}
+
+/** Example rules used by the template application (remove for your app) */
+h1 {
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.sendButton {
+  display: block;
+  font-size: 16pt;
+}
+
+/** Most GWT widgets already have a style name defined */
+.gwt-DialogBox {
+  width: 400px;
+}
+
+.dialogVPanel {
+  margin: 5px;
+}
+
+.serverResponseLabelError {
+  color: red;
+}
+
+/** Set ids using widget.getElement().setId("idOfElement") */
+#closeButton {
+  margin: 15px 6px 6px;
+}
+
+.inputError {
+  border-color: red;
+}
+
+.inputOK {
+}
+
+.inputElement {
+	border-color: white;
+}
+
+.mainHorizontalPanel {
+	width = "1200px";
+	height = "1000px";
+}
+
+.emptyLabel {
+	background-color: #86C544;
+	font: 15px arial,sans-serif;
+	width: 622px;
+	height: 10px;
+	 
+}
+
+.emptyLabel2 {
+	background-color: #86C544;
+	font: 15px arial,sans-serif;
+	width:622px;
+	height: 10px;
+	 
+}
+
+.emptyLabel3 {
+	background-color: #86C544;
+	font: 15px arial,sans-serif;
+	width: 622px;
+	height: 10px;
+	margin-top: 2px;
+	 
+}
+
+
+.emptyLabelRiskPanelStyle {
+	background-color: #86C544;
+	font: 15px arial,sans-serif;
+	width: 800px;
+	height: 5px;
+	margin-top: 2px;
+}
+
+
+
+.headerLabel {
+	background-color: #86C544;
+	font: 15px arial,sans-serif;
+	width: 622px;
+	height: 20px;
+	color: white;
+	 
+}
+
+.commentLabel {
+	background-color: #86C544;
+	font: 15px arial,sans-serif;
+	width: 622px;
+	height: 30px;
+	color: white;
+	
+	
+}
+
+.commentStyle  {
+	font: 15px arial,sans-serif;
+	width: 566px;
+	height: 80px;
+	resize: none;
+	 
+}
+
+.okButtonDetailsStyle {
+	width: 622px;
+	height: 30px;
+	margin-top: 3px;
+}
+
+.calcRiskButtonDetailsStyle {
+	width: 622px;
+	height: 30px;
+}
+
+.namePanelStyle {
+	width : 200px;
+	height : 50px;
+	background-color: #86C544;
+	color: white;
+
+	
+}
+
+.detailsLabelEmpty {
+	width : 800px;
+	height : 5px;
+	background-color: #86C544;
+	margin: 0px;
+}
+
+
+.detailsLabelRiskCalculationStyle {
+	width : 800px;
+	height : 30px;
+	color : white;
+	background-color: #86C544;
+	margin: 0px;
+	margin-bottom: 10px;
+}
+
+.noHistoriesLabelStyle {
+	width : 800px;
+	height : 30px;
+	color : white;
+	background-color: #86C544; 
+	margin-bottom: 10px;
+}
+
+.noHistoriesLabelEmptyStyle {
+	width : 800px;
+	height : 3px;
+	color : white;
+	background-color: #86C544; 
+	margin-top: 10px;
+	margin-bottom: 0px
+	
+	
+}
+
+.gridStyle1 {
+	width: 800px;	
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.errorTextStyle {
+	color: red;
+}
+
+.transparent-button {
+	background: transparent;
+	border: none;
+	outline: none;
+	width : 1px;
+	height : 1px;
+}
+
+.agreeButtonStyle {
+	.margin-right: 10px;
+}

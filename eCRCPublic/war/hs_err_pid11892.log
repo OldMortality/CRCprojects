@@ -1,0 +1,199 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  Internal Error (sharedRuntime.cpp:723), pid=11892, tid=11204
+#  guarantee(false) failed: missing exception handler
+#
+# JRE version: 7.0-b147
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (21.0-b17 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000007ba1800):  JavaThread "Code server for ecrc from Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0 on http://127.0.0.1:8888/ecrc.html?gwt.codesvr=127.0.0.1:9997&name=Joe&dob=13sep1964&nhi=1234567&erefid=1 @ @[t3`H@uu\6(_U6j" daemon [_thread_in_vm, id=11204, stack(0x0000000012250000,0x0000000012350000)]
+
+Stack: [0x0000000012250000,0x0000000012350000]
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+v  ~ExceptionBlob
+J  java.net.SocketInputStream.read([BII)I
+J  java.io.BufferedInputStream.fill()V
+J  java.io.BufferedInputStream.read()I
+J  com.google.gwt.dev.shell.BrowserChannel$Message.readMessageType(Ljava/io/DataInputStream;)Lcom/google/gwt/dev/shell/BrowserChannel$MessageType;
+j  com.google.gwt.dev.shell.BrowserChannelServer.reactToMessages(Lcom/google/gwt/dev/shell/BrowserChannelServer$SessionHandlerServer;)V+11
+j  com.google.gwt.dev.shell.BrowserChannelServer.processConnection()V+877
+j  com.google.gwt.dev.shell.BrowserChannelServer.run()V+1
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x000000000f2b3800 JavaThread "btpool0-14" [_thread_blocked, id=4700, stack(0x00000000090f0000,0x00000000091f0000)]
+  0x000000000f2b5800 JavaThread "Code server for ecrc from Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0 on http://127.0.0.1:8888/ecrc.html?gwt.codesvr=127.0.0.1:9997&name=Joe&dob=13sep1964&nhi=1234567&erefid=10 @ NW=}HR:@mqIvL6k]" daemon [_thread_blocked, id=9224, stack(0x0000000012b10000,0x0000000012c10000)]
+  0x0000000007ba6800 JavaThread "CompilationUnitBuilder" daemon [_thread_blocked, id=4360, stack(0x0000000012580000,0x0000000012680000)]
+  0x0000000007ba5000 JavaThread "Code server for ecrc from Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0 on http://127.0.0.1:8888/ecrc.html?gwt.codesvr=127.0.0.1:9997&name=Joe&dob=13sep1964&nhi=1234567&erefid=8 @ [M/,VVTxwd41q>BF" daemon [_thread_blocked, id=9340, stack(0x0000000012040000,0x0000000012140000)]
+  0x0000000007ba6000 JavaThread "CompilationUnitBuilder" daemon [_thread_blocked, id=11152, stack(0x0000000012c30000,0x0000000012d30000)]
+  0x00000000071f5000 JavaThread "CompilationUnitBuilder" daemon [_thread_blocked, id=3164, stack(0x00000000115a0000,0x00000000116a0000)]
+  0x0000000007ba4800 JavaThread "Code server for ecrc from Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0 on http://127.0.0.1:8888/ecrc.html?gwt.codesvr=127.0.0.1:9997&name=Joe&dob=13sep1964&nhi=1234567&erefid=5 @ ]tC5`2/7Vud-\.WL" daemon [_thread_blocked, id=3888, stack(0x00000000129f0000,0x0000000012af0000)]
+  0x0000000007ba3800 JavaThread "Code server for ecrc from Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0 on http://127.0.0.1:8888/ecrc.html?gwt.codesvr=127.0.0.1:9997&name=Joe&dob=13sep1964&nhi=1234567&erefid=4 @ b\O$^Vtxjg7X-;#"" daemon [_thread_blocked, id=10968, stack(0x00000000127e0000,0x00000000128e0000)]
+  0x0000000007ba3000 JavaThread "Code server for ecrc from Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0 on http://127.0.0.1:8888/ecrc.html?gwt.codesvr=127.0.0.1:9997&name=Joe&dob=13sep1964&nhi=1234567&erefid=3 @ Bd0wA,RL,@-A#_W6" daemon [_thread_blocked, id=12256, stack(0x00000000126b0000,0x00000000127b0000)]
+  0x0000000007ba2800 JavaThread "Code server for ecrc from Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0 on http://127.0.0.1:8888/ecrc.html?gwt.codesvr=127.0.0.1:9997&name=Joe&dob=13sep1964&nhi=1234567&erefid=2 @ QOS2~]Hj~,poXjO:" daemon [_thread_blocked, id=8612, stack(0x00000000123a0000,0x00000000124a0000)]
+=>0x0000000007ba1800 JavaThread "Code server for ecrc from Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0 on http://127.0.0.1:8888/ecrc.html?gwt.codesvr=127.0.0.1:9997&name=Joe&dob=13sep1964&nhi=1234567&erefid=1 @ @[t3`H@uu\6(_U6j" daemon [_thread_in_vm, id=11204, stack(0x0000000012250000,0x0000000012350000)]
+  0x00000000071f6800 JavaThread "Code server for ecrc from Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0 on http://127.0.0.1:8888/ecrc.html?gwt.codesvr=127.0.0.1:9997&name=Joe&dob=13sep1964&nhi=1234567&erefid=0 @ S4~B3p=84&M'zXu>" daemon [_thread_blocked, id=11820, stack(0x0000000011980000,0x0000000011a80000)]
+  0x00000000071f4800 JavaThread "btpool0-11" [_thread_blocked, id=3820, stack(0x00000000114a0000,0x00000000115a0000)]
+  0x000000000f2b4000 JavaThread "Code server for ecrc from Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0 on http://127.0.0.1:8888/ecrc.html?gwt.codesvr=127.0.0.1:9997&name=Joe&dob=13sep1964&nhi=1234567&erefid=10 @ i.>"J>P5:WN)6{jA" daemon [_thread_blocked, id=11532, stack(0x000000000a990000,0x000000000aa90000)]
+  0x000000000f2ba800 JavaThread "Code server for ecrc from Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0 on http://127.0.0.1:8888/ecrc.html?gwt.codesvr=127.0.0.1:9997&name=Joe&dob=13sep1964&nhi=1234567&erefid=6 @ <a&P'&J0PO%5e74z" daemon [_thread_blocked, id=10136, stack(0x000000000a3f0000,0x000000000a4f0000)]
+  0x00000000071f3800 JavaThread "Code server for ecrc from Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0 on http://127.0.0.1:8888/ecrc.html?gwt.codesvr=127.0.0.1:9997&name=Joe&dob=13sep1964&nhi=1234567&erefid=7 @ UO,0P;dew5:D7h4`" daemon [_thread_in_native, id=8916, stack(0x0000000011ed0000,0x0000000011fd0000)]
+  0x00000000071f3000 JavaThread "Code server for ecrc from Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0 on http://127.0.0.1:8888/ecrc.html?gwt.codesvr=127.0.0.1:9997&name=Joe&dob=13sep1964&nhi=1234567&erefid=6 @ 0zE4eWk_zvIIU!l/" daemon [_thread_in_native, id=7360, stack(0x0000000011d80000,0x0000000011e80000)]
+  0x00000000071f2000 JavaThread "Code server for ecrc from Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0 on http://127.0.0.1:8888/ecrc.html?gwt.codesvr=127.0.0.1:9997&name=Joe&dob=13sep1964&nhi=1234567&erefid=5 @ m#oZM]ZRs]DN,*BC" daemon [_thread_in_native, id=11652, stack(0x0000000011ba0000,0x0000000011ca0000)]
+  0x00000000071f1800 JavaThread "Code server for ecrc from Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0 on http://127.0.0.1:8888/ecrc.html?gwt.codesvr=127.0.0.1:9997&name=Joe&dob=13sep1964&nhi=1234567&erefid=4 @ |f])'ks\)~MyR0\B" daemon [_thread_in_native, id=10064, stack(0x0000000011a90000,0x0000000011b90000)]
+  0x00000000071f0800 JavaThread "Code server for ecrc from Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0 on http://127.0.0.1:8888/ecrc.html?gwt.codesvr=127.0.0.1:9997&name=Joe&dob=13sep1964&nhi=1234567&erefid=3 @ )ZYTo,;o<%EaeiRu" daemon [_thread_in_native, id=9392, stack(0x00000000117e0000,0x00000000118e0000)]
+  0x00000000071ef000 JavaThread "Code server for ecrc from Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0 on http://127.0.0.1:8888/ecrc.html?gwt.codesvr=127.0.0.1:9997&name=Joe&dob=13sep1964&nhi=1234567&erefid=2 @ aPzu%b*313Gr&u)3" daemon [_thread_in_native, id=10280, stack(0x000000000bdb0000,0x000000000beb0000)]
+  0x000000000f2ba000 JavaThread "Code server for ecrc from Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0 on http://127.0.0.1:8888/ecrc.html?gwt.codesvr=127.0.0.1:9997&name=Joe&dob=13sep1964&nhi=1234567&erefid=1 @ yz$3=mC+Uefa,FzN" daemon [_thread_in_native, id=9404, stack(0x000000000f140000,0x000000000f240000)]
+  0x000000000f2b4800 JavaThread "Code server for ecrc from Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0 on http://127.0.0.1:8888/ecrc.html?gwt.codesvr=127.0.0.1:9997&name=Joe&dob=13sep1964&nhi=1234567&erefid=0 @ Rwl1"!)8x(|mdU'r" daemon [_thread_in_native, id=4908, stack(0x000000000a880000,0x000000000a980000)]
+  0x000000000f2b9000 JavaThread "C3P0PooledConnectionPoolManager[identityToken->1hge1368y12anhvr9ekhq|43514546]-HelperThread-#2" daemon [_thread_blocked, id=10776, stack(0x0000000010370000,0x0000000010470000)]
+  0x000000000f2b8800 JavaThread "C3P0PooledConnectionPoolManager[identityToken->1hge1368y12anhvr9ekhq|43514546]-HelperThread-#1" daemon [_thread_blocked, id=10924, stack(0x000000000f030000,0x000000000f130000)]
+  0x000000000f2b7800 JavaThread "C3P0PooledConnectionPoolManager[identityToken->1hge1368y12anhvr9ekhq|43514546]-HelperThread-#0" daemon [_thread_blocked, id=13036, stack(0x0000000010240000,0x0000000010340000)]
+  0x000000000f2b7000 JavaThread "C3P0PooledConnectionPoolManager[identityToken->1hge1368y12anhvr9ekhq|43514546]-AdminTaskTimer" daemon [_thread_blocked, id=5796, stack(0x000000000bec0000,0x000000000bfc0000)]
+  0x000000000f2b6000 JavaThread "Code server for ecrc from Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0 on http://127.0.0.1:8888/ecrc.html?gwt.codesvr=127.0.0.1:9997&name=Joe&dob=13sep1964&nhi=1234567&erefid=7 @ "I,9%/:%+4{Rt{;P" daemon [_thread_blocked, id=12932, stack(0x000000000a650000,0x000000000a750000)]
+  0x0000000007e51800 JavaThread "Code server for ecrc from Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0 on http://127.0.0.1:8888/ecrc.html?gwt.codesvr=127.0.0.1:9997&name=Joe&dob=13sep1964&nhi=1234567&erefid=7 @ jj.RMJ&|G!-8mSKe" daemon [_thread_blocked, id=12448, stack(0x000000000a780000,0x000000000a880000)]
+  0x0000000009574000 JavaThread "Timer-0" daemon [_thread_blocked, id=11132, stack(0x0000000008d10000,0x0000000008e10000)]
+  0x0000000009400800 JavaThread "btpool0-1 - Acceptor0 SelectChannelConnector@127.0.0.1:8888" [_thread_in_native, id=8860, stack(0x000000000a520000,0x000000000a620000)]
+  0x0000000007bc9800 JavaThread "GC Daemon" daemon [_thread_blocked, id=11640, stack(0x0000000008f30000,0x0000000009030000)]
+  0x0000000007b20000 JavaThread "Code server listener" daemon [_thread_in_native, id=5020, stack(0x0000000008a30000,0x0000000008b30000)]
+  0x0000000007b27800 JavaThread "pool-1-thread-1" [_thread_blocked, id=4304, stack(0x0000000008e10000,0x0000000008f10000)]
+  0x00000000073ef800 JavaThread "Thread-2" daemon [_thread_blocked, id=5312, stack(0x0000000008bb0000,0x0000000008cb0000)]
+  0x0000000007a28800 JavaThread "Thread-1" [_thread_blocked, id=12560, stack(0x0000000008870000,0x0000000008970000)]
+  0x00000000070d2000 JavaThread "Service Thread" daemon [_thread_blocked, id=9880, stack(0x0000000007570000,0x0000000007670000)]
+  0x00000000070d1000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=6672, stack(0x0000000007400000,0x0000000007500000)]
+  0x0000000007166800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=11324, stack(0x0000000006dc0000,0x0000000006ec0000)]
+  0x00000000062b2000 JavaThread "Attach Listener" daemon [_thread_blocked, id=13088, stack(0x0000000006ef0000,0x0000000006ff0000)]
+  0x00000000062aa800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=5376, stack(0x0000000006c50000,0x0000000006d50000)]
+  0x0000000002586800 JavaThread "Finalizer" daemon [_thread_blocked, id=11148, stack(0x0000000006a80000,0x0000000006b80000)]
+  0x000000000257e800 JavaThread "Reference Handler" daemon [_thread_blocked, id=11960, stack(0x00000000066f0000,0x00000000067f0000)]
+  0x00000000004ab800 JavaThread "main" [_thread_blocked, id=13260, stack(0x00000000027f0000,0x00000000028f0000)]
+
+Other Threads:
+  0x000000000257a000 VMThread [stack: 0x00000000068c0000,0x00000000069c0000] [id=11136]
+  0x00000000070f5800 WatcherThread [stack: 0x00000000076d0000,0x00000000077d0000] [id=4100]
+
+VM state:synchronizing (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00000000004ae590] Threads_lock - owner thread: 0x000000000257a000
+[0x00000000004aea90] Heap_lock - owner thread: 0x0000000007ba5000
+[0x00000000004af010] MethodData_lock - owner thread: 0x0000000007ba5000
+
+Heap
+ PSYoungGen      total 100416K, used 4424K [0x00000000f5560000, 0x00000000fb7f0000, 0x0000000100000000)
+  eden space 100288K, 4% used [0x00000000f5560000,0x00000000f59b2250,0x00000000fb750000)
+  from space 128K, 0% used [0x00000000fb750000,0x00000000fb750000,0x00000000fb770000)
+  to   space 128K, 0% used [0x00000000fb7d0000,0x00000000fb7d0000,0x00000000fb7f0000)
+ PSOldGen        total 349568K, used 346878K [0x00000000e0000000, 0x00000000f5560000, 0x00000000f5560000)
+  object space 349568K, 99% used [0x00000000e0000000,0x00000000f52bf9f0,0x00000000f5560000)
+ PSPermGen       total 83968K, used 83968K [0x00000000dae00000, 0x00000000e0000000, 0x00000000e0000000)
+  object space 83968K, 100% used [0x00000000dae00000,0x00000000e0000000,0x00000000e0000000)
+
+Code Cache  [0x00000000028f0000, 0x0000000002eb0000, 0x00000000058f0000)
+ total_blobs=2051 nmethods=1599 adapters=402 free_code_cache=43483Kb largest_free_block=44358912
+
+Dynamic libraries:
+0x000000013fff0000 - 0x0000000140023000 	C:\Program Files\Java\jre7\bin\javaw.exe
+0x0000000077340000 - 0x00000000774e9000 	C:\Windows\SYSTEM32\ntdll.dll
+0x0000000077120000 - 0x000000007723f000 	C:\Windows\system32\kernel32.dll
+0x000007fefd1e0000 - 0x000007fefd24b000 	C:\Windows\system32\KERNELBASE.dll
+0x000007fefdbf0000 - 0x000007fefdccb000 	C:\Windows\system32\ADVAPI32.dll
+0x000007feff290000 - 0x000007feff32f000 	C:\Windows\system32\msvcrt.dll
+0x000007feff630000 - 0x000007feff64f000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007fefee50000 - 0x000007fefef7d000 	C:\Windows\system32\RPCRT4.dll
+0x0000000077240000 - 0x000000007733a000 	C:\Windows\system32\USER32.dll
+0x000007fefdb80000 - 0x000007fefdbe7000 	C:\Windows\system32\GDI32.dll
+0x000007feff3d0000 - 0x000007feff3de000 	C:\Windows\system32\LPK.dll
+0x000007feff4d0000 - 0x000007feff599000 	C:\Windows\system32\USP10.dll
+0x000007fefb580000 - 0x000007fefb774000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.17514_none_fa396087175ac9ac\COMCTL32.dll
+0x000007fefdcd0000 - 0x000007fefdd41000 	C:\Windows\system32\SHLWAPI.dll
+0x000007feff5a0000 - 0x000007feff5ce000 	C:\Windows\system32\IMM32.DLL
+0x000007fefd780000 - 0x000007fefd889000 	C:\Windows\system32\MSCTF.dll
+0x000007fefd0d0000 - 0x000007fefd110000 	C:\Windows\system32\nvinitx.dll
+0x000000000f000000 - 0x000000000f006000 	C:\Program Files\NVIDIA Corporation\CoProcManager\_etoured.dll
+0x000007fef9600000 - 0x000007fef9654000 	C:\Program Files\NVIDIA Corporation\CoProcManager\nvd3d9wrapx.dll
+0x000007fefdd60000 - 0x000007fefdf37000 	C:\Windows\system32\SETUPAPI.dll
+0x000007fefd3a0000 - 0x000007fefd3d6000 	C:\Windows\system32\CFGMGR32.dll
+0x000007fefdaa0000 - 0x000007fefdb77000 	C:\Windows\system32\OLEAUT32.dll
+0x000007fefd890000 - 0x000007fefda93000 	C:\Windows\system32\ole32.dll
+0x000007fefd250000 - 0x000007fefd26a000 	C:\Windows\system32\DEVOBJ.dll
+0x000007fef9280000 - 0x000007fef92c3000 	C:\Program Files\NVIDIA Corporation\CoProcManager\nvdxgiwrapx.dll
+0x0000000180000000 - 0x0000000180064000 	C:\Windows\system32\guard64.dll
+0x000007fefd0c0000 - 0x000007fefd0c9000 	C:\Windows\system32\fltlib.dll
+0x000000005bd80000 - 0x000000005be51000 	C:\Program Files\Java\jre7\bin\msvcr100.dll
+0x000000005caa0000 - 0x000000005d16e000 	C:\Program Files\Java\jre7\bin\server\jvm.dll
+0x000007fef7290000 - 0x000007fef7299000 	C:\Windows\system32\WSOCK32.dll
+0x000007feff480000 - 0x000007feff4cd000 	C:\Windows\system32\WS2_32.dll
+0x000007fefdd50000 - 0x000007fefdd58000 	C:\Windows\system32\NSI.dll
+0x000007fefbd20000 - 0x000007fefbd5b000 	C:\Windows\system32\WINMM.dll
+0x0000000077510000 - 0x0000000077517000 	C:\Windows\system32\PSAPI.DLL
+0x000000005c5a0000 - 0x000000005c5af000 	C:\Program Files\Java\jre7\bin\verify.dll
+0x000000005c570000 - 0x000000005c598000 	C:\Program Files\Java\jre7\bin\java.dll
+0x0000000065520000 - 0x0000000065543000 	C:\Program Files\Java\jre7\bin\instrument.dll
+0x000000005c440000 - 0x000000005c455000 	C:\Program Files\Java\jre7\bin\zip.dll
+0x0000000065bf0000 - 0x0000000065c09000 	C:\Program Files\Java\jre7\bin\net.dll
+0x000007fefc800000 - 0x000007fefc855000 	C:\Windows\system32\mswsock.dll
+0x000007fefc7f0000 - 0x000007fefc7f7000 	C:\Windows\System32\wship6.dll
+0x000007fefc150000 - 0x000007fefc157000 	C:\Windows\System32\wshtcpip.dll
+0x000007fefc680000 - 0x000007fefc6db000 	C:\Windows\system32\DNSAPI.dll
+0x000007fef7060000 - 0x000007fef708e000 	C:\Program Files\Common Files\Microsoft Shared\Windows Live\WLIDNSP.DLL
+0x0000000070d70000 - 0x0000000070d96000 	C:\Program Files\Bonjour\mdnsNSP.dll
+0x000007fefa130000 - 0x000007fefa157000 	C:\Windows\system32\Iphlpapi.DLL
+0x000007fefa110000 - 0x000007fefa11b000 	C:\Windows\system32\WINNSI.DLL
+0x000007fef6c20000 - 0x000007fef6c28000 	C:\Windows\system32\rasadhlp.dll
+0x000007fefa000000 - 0x000007fefa053000 	C:\Windows\System32\fwpuclnt.dll
+0x000007fefc860000 - 0x000007fefc877000 	C:\Windows\system32\CRYPTSP.dll
+0x000007fefc560000 - 0x000007fefc5a7000 	C:\Windows\system32\rsaenh.dll
+0x000007fefc290000 - 0x000007fefc2ae000 	C:\Windows\system32\USERENV.dll
+0x000007fefd110000 - 0x000007fefd11f000 	C:\Windows\system32\profapi.dll
+0x000007fefcff0000 - 0x000007fefcfff000 	C:\Windows\system32\CRYPTBASE.dll
+0x000007fefa340000 - 0x000007fefa355000 	C:\Windows\system32\NLAapi.dll
+0x000007fef70c0000 - 0x000007fef70d5000 	C:\Windows\system32\napinsp.dll
+0x000007fef70a0000 - 0x000007fef70b9000 	C:\Windows\system32\pnrpnsp.dll
+0x000007fef7090000 - 0x000007fef709b000 	C:\Windows\System32\winrnr.dll
+0x000007fef7050000 - 0x000007fef7060000 	C:\Windows\system32\wshbth.dll
+0x0000000065990000 - 0x00000000659a1000 	C:\Program Files\Java\jre7\bin\nio.dll
+0x00000000569a0000 - 0x00000000569c4000 	C:\Program Files\Java\jre7\bin\sunec.dll
+0x0000000064f40000 - 0x0000000064f4b000 	C:\Program Files\Java\jre7\bin\sunmscapi.dll
+0x000007fefd3e0000 - 0x000007fefd54c000 	C:\Windows\system32\CRYPT32.dll
+0x000007fefd1c0000 - 0x000007fefd1cf000 	C:\Windows\system32\MSASN1.dll
+0x000000006d260000 - 0x000000006d26b000 	C:\Program Files\Java\jre7\bin\management.dll
+
+VM Arguments:
+jvm_args: -Xmx512m -javaagent:C:\Users\michel\Downloads\eclipse-standard-kepler-RC3-win32-x86_64\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.8.1.1\appengine-java-sdk-1.8.1.1\lib\agent\appengine-agent.jar -Dfile.encoding=Cp1252 
+java_command: com.google.gwt.dev.DevMode -remoteUI 50679:37441547632731 -startupUrl ecrc.html -logLevel INFO -codeServerPort 9997 -port 8888 -war C:\Users\michel\workspaceKepler\eCRC\war ac.otago.infoscience.eCRC.ECRC
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.6.0_30
+JRE_HOME=C:\Program Files\Java\jre7
+CLASSPATH=.;C:\Program Files\Weka-3-6\weka.jar;C:\Program Files (x86)\Java\jre7\lib\ext\QTJava.zip
+PATH=C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\OEM\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\OEM\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\OEM\12.0\DLLShared\;C:\Program Files (x86)\Roxio\OEM\AudioCore\;C:\OpenCV2.3MinGW\bin;C:\MinGW\bin;C:\Program Files (x86)\Calibre2\;PROGRAMFILES\Internet Explorer;C:\msys\1.0\bin\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\derby\db-derby-10.10.1.1-bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Graphviz2.30\bin;C:\apache-ant-1.9.2-bin\apache-ant-1.9.2/bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\
+USERNAME=michel
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 42 Stepping 7, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 Service Pack 1
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 42 stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, ht
+
+Memory: 4k page, physical 6203568k(1134436k free), swap 12405272k(3361720k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (21.0-b17) for windows-amd64 JRE (1.7.0-b147), built on Jun 27 2011 02:19:45 by "java_re" with unknown MS VC++:1600
+
+time: Wed Oct 30 00:06:05 2013
+elapsed time: 1169 seconds
+

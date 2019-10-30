@@ -1,0 +1,35 @@
+<project default="deploywar">
+
+	<!-- 
+	
+	Creates and deploys the war file for the Test system.
+
+ 	-->
+
+
+	<property name="deploydir" value="C:\apache-tomcat-6.0.37\webapps" />
+	<property name="targetdir" value="C:\Users\michel\workspaceKepler\eCRC\war" />
+
+	 
+	<target name="log4jreplace" >
+			<replace file="${targetdir}/WEB-INF/classes/log4j.properties">
+
+				<replacefilter token="@LOGFILE@" value="ecrcpublic.log" />
+				<replacefilter token="@MAIL_TO@" value="michel_de_lange@yahoo.co.uk" />
+				<replacefilter token="@MAIL_HOST@" value="mailrelay.staff.otago.ac.nz" />
+				<replacefilter token="@APPENDER@" value="org.apache.log4j.net.SMTPAppender" />
+				<replacefilter token="log4j.rootLogger=info, stdout, file" value="log4j.rootLogger=info, stdout, file, email"/>
+
+			</replace>
+		</target>
+
+
+	<!--   create the test war file -->
+	<target name="deploywar" depends="log4jreplace" >
+		<zip destfile="${deploydir}/ecrcpublic.war" basedir="${targetdir}">
+		</zip>
+	</target>
+
+
+
+</project>

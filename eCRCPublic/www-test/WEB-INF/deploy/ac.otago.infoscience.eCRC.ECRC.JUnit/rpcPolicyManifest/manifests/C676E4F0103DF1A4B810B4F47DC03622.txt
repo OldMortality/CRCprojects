@@ -1,0 +1,2 @@
+serviceClass: ac.otago.infoscience.eCRC.client.UpdateService
+path: 1D10CCAFD7DB0D1675E828D766DD116D.gwt.rpc

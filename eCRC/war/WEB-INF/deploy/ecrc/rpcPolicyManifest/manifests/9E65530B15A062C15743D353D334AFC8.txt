@@ -1,0 +1,2 @@
+serviceClass: ac.otago.infoscience.eCRC.client.GetHistoryService
+path: 7F0C87E528641794D39483E8A5754AC7.gwt.rpc

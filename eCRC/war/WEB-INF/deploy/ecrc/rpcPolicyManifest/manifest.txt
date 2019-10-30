@@ -1,0 +1,4 @@
+# Module ecrc
+# RPC service class, partial path of RPC policy file
+ac.otago.infoscience.eCRC.client.GetHistoryService, 7F0C87E528641794D39483E8A5754AC7.gwt.rpc
+ac.otago.infoscience.eCRC.client.UpdateService, 1D10CCAFD7DB0D1675E828D766DD116D.gwt.rpc

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 29-Jun-2008 11:12:23 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="ac.otago.infoscience.eCRC.server.db.Relations" table="RELATIONS" schema="APP" lazy="false">
+        <id name="id" type="string">
+            <column name="ID" length="32" />
+            
+            <generator class="uuid" />
+        </id>
+           
+        <property name="relationshipType" type="java.lang.Short">
+            <column name="RELATIONSHIP_TYPE" not-null="true"/>
+        </property>
+        
+        <property name="erefID" type="string">
+        	<column name="EREF_ID " not-null="false"/>
+        </property>
+        
+        <property name="name" type="string">
+        	<column name="NAME " not-null="false"/>
+        </property>
+        
+        <property name="colonCancer" type="java.lang.Short">
+            <column name="COLON_CANCER" />
+        </property>
+
+        <property name="colonCancerAge" type="java.lang.Short">
+            <column name="COLON_CANCER_AGE" />
+        </property>
+
+		<property name="multiplePolyps" type="java.lang.Short">
+            <column name="MULTIPLE_POLYPS" />
+        </property>
+
+        
+     	<property name="otherCancer" type="java.lang.Short">
+            <column name="OTHER_CANCER" />
+        </property>
+        
+        <property name="otherCancerAge" type="java.lang.Short">
+            <column name="OTHER_CANCER_AGE" />
+        </property>
+        
+        <property name="deceased" type="java.lang.Short">
+            <column name="DECEASED" />
+        </property>
+        
+       <property name="deceasedAge" type="java.lang.Short">
+            <column name="DECEASED_AGE" />
+        </property>
+        
+        <property name="riskLevel" type="java.lang.Short">
+            <column name="RISK_CATEGORY" />
+        </property>
+        
+        <property name="ipAddress" type="java.lang.String">
+            <column name="IP_ADDRESS" />
+        </property>
+        
+         
+        <property name="timest" type="timestamp">
+            <column name="TIMEST" not-null="true" />
+        </property>
+        
+        
+        <many-to-one name="comment" column="comment" unique="true" cascade="all"
+       		class="ac.otago.infoscience.eCRC.server.db.Comment" not-null="false"/>
+        
+	</class>
+        
+        
+        
+    
+    
+<class name="ac.otago.infoscience.eCRC.server.db.Comment" table="COMMENTS" schema="APP" lazy="false" >
+        <id name="id" type="string">
+            <column name="COMMENT_ID" length="32" />
+            <generator class="uuid" />
+        </id>
+        
+         <property name="erefID" type="string">
+        	<column name="EREF_ID " not-null="false"/>
+        </property>
+        
+        <property name="comment" type="java.lang.String">
+            <column name="COMMENT" />
+        </property>
+        
+        
+    </class>
+    
+     
+    
+</hibernate-mapping>
